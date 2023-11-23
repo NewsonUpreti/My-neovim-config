@@ -730,6 +730,17 @@ nvim_lsp.pyright.setup{}
 vim.api.nvim_set_keymap('i', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
 
+-- Automatic pair closing
+vim.api.nvim_set_keymap('i', '{', '{}<Left>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '[', '[]<Left>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '"', '""<Left>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', "'", "''<Left>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<', '<><C-g>U<Left>', { noremap = true, silent = true })
+
+-- Automatic pair closing for parentheses
+vim.api.nvim_set_keymap('i', '(', '()<Left>', { noremap = true, silent = true })
+
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
