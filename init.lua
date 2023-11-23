@@ -741,6 +741,9 @@ vim.api.nvim_set_keymap('i', '<', '<><C-g>U<Left>', { noremap = true, silent = t
 vim.api.nvim_set_keymap('i', '(', '()<Left>', { noremap = true, silent = true })
 
 
+-- Map the backtick key in insert mode to insert `` and leave the cursor between the backticks
+vim.api.nvim_set_keymap('i', '`', '``<Left>', { noremap = true, silent = true })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
