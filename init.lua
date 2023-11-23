@@ -678,7 +678,7 @@ vim.cmd[[
 ]]
 
 -- Map Space followed by n to open a new split with an empty buffer
-vim.api.nvim_set_keymap('n', '<Space>n', ':vsp +new<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>n', ':vsp new<CR>', { noremap = true, silent = true })
 
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
