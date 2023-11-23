@@ -648,7 +648,7 @@ vim.api.nvim_set_keymap('n', '<Leader>n', [[:tabnew<CR>]], { noremap = true, sil
 vim.api.nvim_set_keymap('n', '<C-c>', [[:cd %:p:h<CR>]], { noremap = true, silent = true })
 
 -- Enable autosave
-vim.cmd[[autocmd TextChanged,TextChangedI <buffer> silent write]]
+-- vim.cmd[[autocmd TextChanged,TextChangedI <buffer> silent write]]
 
 -- Enable auto-reload when a file is changed externally
 vim.cmd[[autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * checktime]]
