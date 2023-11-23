@@ -734,7 +734,7 @@ vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = 
 vim.api.nvim_set_keymap('i', '{', '{}<Left>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '[', '[]<Left>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '"', '""<Left>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', "'", "''<Left>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('i', "'", "''<Left>", { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('i', '<', '<><C-g>U<Left>', { noremap = true, silent = true })
 
 -- Automatic pair closing for parentheses
