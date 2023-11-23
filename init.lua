@@ -622,6 +622,9 @@ vim.api.nvim_set_keymap('n', '<Space>r', [[:w<CR>:rightbelow vsplit term://g++ %
 
 vim.api.nvim_set_keymap('n', '<Space>t', [[:tabnew | term<CR>:startinsert<CR>]], { noremap = true, silent = true })
 
+-- new tab shortcut in neovim
+vim.api.nvim_set_keymap('n', '<S-t>', ':tabnew<CR>', { noremap = true, silent = true })
+
 -- Map Space followed by r to run Python program
 vim.api.nvim_set_keymap('n', '<Space>p', [[:w<CR>:rightbelow vsplit term://python3 %<CR>i]], { noremap = true, silent = true })
 
