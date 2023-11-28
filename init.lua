@@ -112,7 +112,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',  opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -356,7 +356,7 @@ local function live_grep_git_root()
   local git_root = find_git_root()
   if git_root then
     require('telescope.builtin').live_grep({
-      search_dirs = {git_root},
+      search_dirs = { git_root },
     })
   end
 end
@@ -616,7 +616,8 @@ cmp.setup {
 
 -- Manually added by user newson
 -- Map Space followed by r to compile and run C++ program
-vim.api.nvim_set_keymap('n', '<Space>r', [[:w<CR>:rightbelow vsplit term://g++ % -o %:r && ./%:r<CR>i]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>r', [[:w<CR>:rightbelow vsplit term://g++ % -o %:r && ./%:r<CR>i]],
+  { noremap = true, silent = true })
 
 -- Open a new tab for the terminal and enter insert mode
 
@@ -626,10 +627,12 @@ vim.api.nvim_set_keymap('n', '<Space>t', [[:tabnew | term<CR>:startinsert<CR>]],
 vim.api.nvim_set_keymap('n', '<S-t>', ':tabnew<CR>', { noremap = true, silent = true })
 
 -- Map Space followed by r to run Python program
-vim.api.nvim_set_keymap('n', '<Space>p', [[:w<CR>:rightbelow vsplit term://python3 %<CR>i]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>p', [[:w<CR>:rightbelow vsplit term://python3 %<CR>i]],
+  { noremap = true, silent = true })
 
 -- Map Space followed by r to run JavaScript program (assuming you have Node.js installed)
-vim.api.nvim_set_keymap('n', '<Space>j', [[:w<CR>:rightbelow vsplit term://node %<CR>i]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>j', [[:w<CR>:rightbelow vsplit term://node %<CR>i]],
+  { noremap = true, silent = true })
 
 -- Map Space followed by w to open HTML file in Brave Browser (Flatpak)
 
@@ -654,8 +657,8 @@ vim.api.nvim_set_keymap('n', '<C-c>', [[:cd %:p:h<CR>]], { noremap = true, silen
 -- vim.cmd[[autocmd TextChanged,TextChangedI <buffer> silent write]]
 
 -- Enable auto-reload when a file is changed externally
-vim.cmd[[autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * checktime]]
-vim.cmd[[autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None]]
+vim.cmd [[autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * checktime]]
+vim.cmd [[autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None]]
 
 
 -- Enable autosave for HTML files
@@ -665,7 +668,7 @@ vim.api.nvim_exec([[
 
 
 -- Enable autosave for specific file types
-vim.cmd[[
+vim.cmd [[
   augroup AutoSaveFiles
     autocmd!
     autocmd BufWritePost *.cpp,*.h,*.cc execute 'lcd ' .. fnameescape(expand('%:p:h')) | silent! write | lcd -
@@ -723,7 +726,7 @@ vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true 
 
 local nvim_lsp = require('lspconfig')
 
-nvim_lsp.pyright.setup{}
+nvim_lsp.pyright.setup {}
 
 
 -- Map escape key to Ctrl + \ + n
@@ -744,6 +747,56 @@ vim.api.nvim_set_keymap('i', '(', '()<Left>', { noremap = true, silent = true })
 -- Map the backtick key in insert mode to insert `` and leave the cursor between the backticks
 vim.api.nvim_set_keymap('i', '`', '``<Left>', { noremap = true, silent = true })
 
+
+require("catppuccin").setup({
+    flavour = "mocha", -- latte, frappe, macchiato, mocha
+    background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+    },
+    transparent_background = false, -- disables setting the background color.
+    show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
+    term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+    dim_inactive = {
+        enabled = false, -- dims the background color of inactive window
+        shade = "dark",
+        percentage = 0.15, -- percentage of the shade to apply to the inactive window
+    },
+    no_italic = false, -- Force no italic
+    no_bold = false, -- Force no bold
+    no_underline = false, -- Force no underline
+    styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+        comments = { "italic" }, -- Change the style of comments
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+    },
+    color_overrides = {},
+    custom_highlights = {},
+    integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        treesitter = true,
+        notify = false,
+        mini = {
+            enabled = true,
+            indentscope_color = "",
+        },
+        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+    },
+})
+
+-- setup must be called before loading
+vim.cmd.colorscheme "catppuccin"
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
