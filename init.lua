@@ -734,18 +734,18 @@ vim.api.nvim_set_keymap('i', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = 
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
 
 -- Automatic pair closing
-vim.api.nvim_set_keymap('i', '{', '{}<Left>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '[', '[]<Left>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '"', '""<Left>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('i', '{', '{}<Left>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('i', '[', '[]<Left>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('i', '"', '""<Left>', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('i', "'", "''<Left>", { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('i', '<', '<><C-g>U<Left>', { noremap = true, silent = true })
 
 -- Automatic pair closing for parentheses
-vim.api.nvim_set_keymap('i', '(', '()<Left>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('i', '(', '()<Left>', { noremap = true, silent = true })
 
 
 -- Map the backtick key in insert mode to insert `` and leave the cursor between the backticks
-vim.api.nvim_set_keymap('i', '`', '``<Left>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('i', '`', '``<Left>', { noremap = true, silent = true })
 
 
 require("catppuccin").setup({
@@ -798,5 +798,6 @@ require("catppuccin").setup({
 -- setup must be called before loading
 vim.cmd.colorscheme "catppuccin"
 
+require("nvim-autopairs")
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
