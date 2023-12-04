@@ -699,7 +699,7 @@ require("nvim-tree").setup({
     sorter = "case_sensitive",
   },
   view = {
-    width = 70,
+    width = 50,
   },
   renderer = {
     group_empty = true,
