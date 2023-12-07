@@ -802,5 +802,8 @@ vim.cmd('set foldmethod=indent')
 require("nvim-autopairs")
 
 vim.wo.relativenumber = true
+
+-- setting the shortcut to launch telescope undo
+vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>")
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
