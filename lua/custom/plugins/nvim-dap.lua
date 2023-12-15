@@ -3,6 +3,7 @@ return {
   dependencies = {
     {
       "jbyuki/one-small-step-for-vimkind",
+      "rcarriga/nvim-dap-ui",
       -- stylua: ignore
       config = function()
         local dap = require("dap")
