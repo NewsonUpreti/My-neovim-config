@@ -23,9 +23,4 @@ return {
 			require("nvim-autopairs").setup({})
 		end,
 	},
-	{
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
-	},
 }

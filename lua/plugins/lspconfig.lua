@@ -136,6 +136,11 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+		-- config for clangd
+		lspconfig["clangd"].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
 
 		-- configure lua server (with special settings)
 		lspconfig["lua_ls"].setup({
