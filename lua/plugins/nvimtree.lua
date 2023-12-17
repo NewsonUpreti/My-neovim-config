@@ -8,7 +8,9 @@ return {
 	config = function()
 		require("nvim-tree").setup({
 
-			vim.api.nvim_set_keymap("n", "<Space>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true }),
+			vim.api.nvim_set_keymap("n", "<Space>e", ":NvimTreeOpen<CR>", { noremap = true, silent = true }),
+
+			vim.api.nvim_set_keymap("n", "<Space>w", ":NvimTreeClose<CR>", { noremap = true, silent = true }),
 			sort = {
 				sorter = "case_sensitive",
 			},
