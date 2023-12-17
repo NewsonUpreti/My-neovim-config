@@ -35,3 +35,6 @@ vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = 
 vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<Space>w", ":bdelete!<CR>", { noremap = true, silent = true })
+--wordwrap config below
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
