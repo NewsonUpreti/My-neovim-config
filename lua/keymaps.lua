@@ -34,4 +34,4 @@ vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = 
 
 vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "<Space>w", ":bdelete<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Space>w", ":bdelete!<CR>", { noremap = true, silent = true })
