@@ -2,7 +2,7 @@
 
 ## Whats neovim?
 
-Neovim is a extensible CLI based code editor, the child of Vim built with lua programming language. Vi is the grandfather of neovim.
+Neovim is a extensible CLI based code editor, the child of Vim built with lua programming language. Vi is the grandfather of neovim. Learn more [here](https://neovim.io/)
 
 ## How does it work?
 
@@ -10,7 +10,7 @@ Neovim is blazing fast and works directly on terminal even in cloud based termin
 
 ## How to start using?
 
-Just download/clone my entire repository to get my configuration. After installing neovim in your computer, create `nvim` directory in your `.config` folder which is inside `/username/home/` directory. now open `nvim` directory and copy all the files from this repository to the `nvim` folder. type `nvim` to launch neovim in terminal, press `esc` and type `:Tutor` to understand the basics.
+Just download/clone my entire repository to get my configuration. After installing neovim in your computer,[click here](https://github.com/neovim/neovim/blob/master/INSTALL.md) if not installed. create `nvim` directory in your `.config` folder which is inside `/username/home/` directory. now open `nvim` directory and copy all the files from this repository to the `nvim` folder. type `nvim` to launch neovim in terminal, press `esc` and type `:Tutor` to understand the basics.
 
 ### OR
 
@@ -18,7 +18,7 @@ you can also directly clone this repo to `/home/user/.config/` and rename `my ne
 
 ## Extras
 
-If you need a debugger, Please install nvim-dap from their official repository and configure for language you prefer using the guide from nvim-dap or lazyvim official page.
+If you need a debugger, Please install nvim-dap from their official repository [click-here](https://github.com/mfussenegger/nvim-dap) and configure for language you prefer using the guide from nvim-dap and configuring language specific adapter is provided there.
 
 ## Guide:
 
@@ -38,7 +38,8 @@ sudo mv My-neovim-config nvim
 nvim
 ```
 
-That's It, You're ready to go. NOTE: All functionalities may not work, as you need to install different packages, compilers and formatters, Feel free to adjust as per need. The folder for lua / plugins is well formatted/built in understandable/manageable manner.
+That's It, You're ready to go.
+NOTE: All functionalities may not work, as you need to install different packages, compilers and formatters, Feel free to adjust as per need. The folder for lua / plugins is well formatted/built in understandable/manageable manner.
 
 ### How to link user config with root config to use same neovim config:
 
@@ -49,6 +50,6 @@ ln -s /home/username/.config/nvim /root/.config/nvim
 
 ### Custom keymaps:
 
-custom keymaps/shortcuts are located in `lua/keymaps.lua` for compiling and running various files, more compilers and running commands can be added as shortcut with the same methods.
+custom keymaps/shortcuts are located in `lua/keymaps.lua` for compiling and running various code and vim/plugins commands. more compiler shortcuts, command shortcuts can be added as shortcut with the same method given.
 
 ## Thank you!
