@@ -46,3 +46,5 @@ vim.api.nvim_set_keymap("n", "<Space>w", ":bdelete!<CR>", { noremap = true, sile
 --wordwrap config below
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+-- Define a mapping for backslash to work as gt
+vim.api.nvim_set_keymap("n", "\\", ":tabnext<CR>", { noremap = true, silent = true })
