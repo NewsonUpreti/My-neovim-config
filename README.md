@@ -52,4 +52,15 @@ ln -s /home/username/.config/nvim /root/.config/nvim
 
 custom keymaps/shortcuts are located in `lua/keymaps.lua` for compiling and running various code and vim/plugins commands. more compiler shortcuts, command shortcuts can be added as shortcut with the same method given.
 
+## Extras:
+
+### Bulk Formatting:
+
+To format all the source code Files in a folder, You can use neovim. To do so, You can use the following command after setting up neovim. The example is for c++, Can be used for any code to format all files at once without opening them.
+
+```bash
+# Run the following command
+find /path/to/your/folder -type f -name "*.cpp" -exec nvim -c "normal gg=G" -c "wq" {} \;
+```
+
 ## Thank you!
