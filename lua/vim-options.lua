@@ -20,6 +20,8 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.breakindent = true
 vim.cmd("set foldmethod=indent")
+
+vim.cmd("set foldlevel=99")
 -- Disable folding in Telescope's result window.
 vim.api.nvim_create_autocmd("FileType", { pattern = "TelescopeResults", command = [[setlocal nofoldenable]] })
 
