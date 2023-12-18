@@ -22,7 +22,7 @@ If you need a debugger, Please install nvim-dap from their official repository [
 
 ## Guide:
 
-### step 1: Install neovim as per your OS. click [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md).
+### step 1: Install neovim as per your OS. click [Here](https://github.com/neovim/neovim/blob/master/INSTALL.md).
 
 ### To get this repository configuration:
 
