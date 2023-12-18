@@ -1,5 +1,6 @@
 return {
 	"ThePrimeagen/harpoon",
+	branch = "harpoon2",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
@@ -24,6 +25,12 @@ return {
 			"<leader>hp",
 			"<cmd>lua require('harpoon.ui').nav_prev()<cr>",
 			{ desc = "Go to previous harpoon mark" }
+		)
+		keymap.set(
+			"n",
+			"<leader>hu",
+			"<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>",
+			{ desc = "Open harpoon UI" }
 		)
 	end,
 }
