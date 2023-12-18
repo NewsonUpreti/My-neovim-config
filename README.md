@@ -26,6 +26,6 @@ ln -s /home/username/.config/nvim /root/.config/nvim
 
 ### Custom keymaps:
 
-custom keymaps/shortcuts are located in `lua/plugins/keymaps.lua` for compiling and running various files, more compilers and running commands can be added as shortcut with the same methods.
+custom keymaps/shortcuts are located in `lua/keymaps.lua` for compiling and running various files, more compilers and running commands can be added as shortcut with the same methods.
 
 ## Thank you!
