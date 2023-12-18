@@ -25,6 +25,14 @@ vim.api.nvim_set_keymap(
 	[[:w<CR>:rightbelow vsplit term://g++ % -o %:r && ./%:r<CR>i]],
 	{ noremap = true, silent = true }
 )
+
+-- Custom keymap for running rust file
+vim.api.nvim_set_keymap(
+	"n",
+	"<Space>z",
+	[[:w<CR>:rightbelow vsplit term://rustc % -o %:r && ./%:r<CR>i]],
+	{ noremap = true, silent = true }
+)
 vim.api.nvim_set_keymap("n", "<Space>n", ":sp new<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<Space>v", ":vsp tabnew<CR>", { noremap = true, silent = true })
