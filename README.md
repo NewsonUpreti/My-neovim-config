@@ -20,9 +20,12 @@ you can also directly clone this repo to `/home/user/.config/` and rename `my ne
 
 If you need a debugger, Please install nvim-dap from their official repository and configure for language you prefer using the guide from nvim-dap or lazyvim official page.
 
-### How to link user config with root config to use same config:
+### How to link user config with root config to use same neovim config:
 
+```bash
+# Use this command to link them.
 ln -s /home/username/.config/nvim /root/.config/nvim
+```
 
 ### Custom keymaps:
 
