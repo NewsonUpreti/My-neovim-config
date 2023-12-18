@@ -10,7 +10,7 @@ Neovim is blazing fast and works directly on terminal even in cloud based termin
 
 ## How to start using?
 
-Just download/clone my entire repository to get my configuration. After installing neovim in your computer,[click here](https://github.com/neovim/neovim/blob/master/INSTALL.md) if not installed. create `nvim` directory in your `.config` folder which is inside `/username/home/` directory. now open `nvim` directory and copy all the files from this repository to the `nvim` folder. type `nvim` to launch neovim in terminal, press `esc` and type `:Tutor` to understand the basics.
+Just download/clone my entire repository to get my configuration. After installing neovim in your computer, [click here](https://github.com/neovim/neovim/blob/master/INSTALL.md) if not installed. create `nvim` directory in your `.config` folder which is inside `/username/home/` directory. now open `nvim` directory and copy all the files from this repository to the `nvim` folder. type `nvim` to launch neovim in terminal, press `esc` and type `:Tutor` to understand the basics.
 
 ### OR
 
