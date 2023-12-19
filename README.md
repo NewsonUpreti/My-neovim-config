@@ -4,6 +4,10 @@
 
 Neovim is a extensible CLI based code editor, the child of Vim built with lua programming language. Vi is the grandfather of neovim. Learn more [here](https://neovim.io/)
 
+## Images:
+
+[](./lua/img/startup.png)
+
 ## How does it work?
 
 Neovim is blazing fast and works directly on terminal even in cloud based terminal to manage and fix server which makes it special if user have good command in it and doesn't work well with mouse and gui responses natively and not made for using with mouse i.e. pointing and clicking to operate. Simply, everything you can imagine can be done by commands/custom keyboard shortcuts that works in differnt modes like(normal,insert,visual,etc..).
