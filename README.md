@@ -6,7 +6,7 @@ Neovim is a extensible CLI based code editor, the child of Vim built with lua pr
 
 ## Images:
 
-[Startup Screen](https://github.com/NewsonUpreti/My-neovim-config/blob/a5ae3a9454fe92205c51f652d336610762ec1546/lua/img/editor.png)
+![](./lua/img/startup.png)
 
 ## How does it work?
 
