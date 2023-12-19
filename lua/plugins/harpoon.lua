@@ -1,6 +1,7 @@
 return {
 	"ThePrimeagen/harpoon",
-	branch = "harpoon2",
+	--branch 2 was throwing error in my config so it is disabled
+	--	branch = "harpoon2",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
@@ -30,7 +31,7 @@ return {
 			"n",
 			"<leader>u",
 			"<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>",
-			{ desc = "Open harpoon UI" }
+			{ desc = "Toggling Harpoon quick Menu" }
 		)
 	end,
 }
