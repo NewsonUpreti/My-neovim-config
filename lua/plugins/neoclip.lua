@@ -16,7 +16,7 @@ return {
 			filter = nil,
 			preview = true,
 			prompt = nil,
-			default_register = "",
+			default_register = '"',
 			default_register_macros = "q",
 			enable_macro_history = true,
 			content_spec_column = false,
