@@ -12,4 +12,7 @@ return {
 			require("nvim-autopairs").setup({})
 		end,
 	},
+	{
+		"vim-autoformat/vim-autoformat",
+	},
 }
