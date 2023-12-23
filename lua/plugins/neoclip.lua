@@ -1,7 +1,7 @@
 return {
 	"AckslD/nvim-neoclip.lua",
 	keys = "<leader>y",
-	requires = {
+	dependencies = {
 		-- you'll need at least one of these
 		{ "nvim-telescope/telescope.nvim" },
 		-- {'ibhagwan/fzf-lua'},
