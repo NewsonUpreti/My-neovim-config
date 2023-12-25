@@ -57,3 +57,13 @@ vim.api.nvim_set_keymap("n", "\\", ":tabnext<CR>", { noremap = true, silent = tr
 
 -- looking after clipboard registers
 vim.api.nvim_set_keymap("n", "<C-l>", ":registers<CR>", { noremap = true, silent = true })
+
+-- select all keymap for normal mode
+vim.api.nvim_set_keymap("n", "<C-a>", "ggVG", { noremap = true, silent = true })
+
+-- Exploring windows splits with shortcuts
+vim.api.nvim_set_keymap("n", "sh", "<C-w>h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "sj", "<C-w>j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "sk", "<C-w>k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "sl", "<C-w>l", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "s\\", "<C-w>w", { noremap = true, silent = true })
