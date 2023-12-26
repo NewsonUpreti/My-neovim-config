@@ -1,5 +1,5 @@
--- lazy.nvim
-return {
+return -- lazy.nvim
+{
 	"folke/noice.nvim",
 	event = "VeryLazy",
 	opts = {
@@ -31,9 +31,41 @@ return {
 				inc_rename = false, -- enables an input dialog for inc-rename.nvim
 				lsp_doc_border = false, -- add a border to hover docs and signature help
 			},
-		})
-		require("notify").setup({
-			background_colour = "#000000",
+			-- @recording in notification box
+			routes = {
+				{
+					view = "notify",
+					filter = { event = "msg_showmode" },
+				},
+			},
+			require("lualine").setup({
+				sections = {
+					lualine_x = {
+						{
+							require("noice").api.statusline.mode.get,
+							cond = require("noice").api.statusline.mode.has,
+							color = { fg = "#f0f0ff" },
+						},
+					},
+				},
+			}),
+			require("notify").setup({
+				-- default timeout for notifications
+				timeout = 3000,
+				-- default background blend
+				blend = 100,
+				-- default icons
+				icons = {
+					ERROR = "",
+					WARN = "",
+					INFO = "",
+					DEBUG = "",
+					TRACE = "✎",
+					FATAL = "",
+				},
+				-- default background colors
+				background_colour = "#000000",
+			}),
 		})
 	end,
 }
