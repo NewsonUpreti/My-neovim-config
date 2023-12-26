@@ -67,3 +67,8 @@ vim.api.nvim_set_keymap("n", "sj", "<C-w>j", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "sk", "<C-w>k", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "sl", "<C-w>l", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "s\\", "<C-w>w", { noremap = true, silent = true })
+
+-- terminal toggler keymap for normal.insert and terminal mode with ctrl + \ key
+vim.api.nvim_set_keymap("n", "<C-\\>", ":ToggleTerm<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-\\>", "<C-\\><C-n>:ToggleTerm<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<C-\\>", "<C-\\><C-n>:ToggleTerm<CR>", { noremap = true, silent = true })
