@@ -56,7 +56,7 @@ vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.api.nvim_set_keymap("n", "\\", ":tabnext<CR>", { noremap = true, silent = true })
 
 -- looking after clipboard registers
-vim.api.nvim_set_keymap("n", "<C-l>", ":registers<CR>", { noremap = true, silent = true })
+--[[ vim.api.nvim_set_keymap("n", "<C-l>", ":registers<CR>", { noremap = true, silent = true }) ]]
 
 -- select all keymap for normal mode
 vim.api.nvim_set_keymap("n", "<C-a>", "ggVG", { noremap = true, silent = true })
