@@ -72,3 +72,10 @@ vim.api.nvim_set_keymap("n", "s\\", "<C-w>w", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-\\>", ":ToggleTerm<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-\\>", "<C-\\><C-n>:ToggleTerm<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-\\>", "<C-\\><C-n>:ToggleTerm<CR>", { noremap = true, silent = true })
+
+-- Increment decrement of ctrl + a and ctrl + x replaced as + and - for normal mode
+vim.api.nvim_set_keymap("n", "+", "<C-a>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "-", "<C-x>", { noremap = true, silent = true })
+
+-- Don't yank with x keymap
+vim.api.nvim_set_keymap("n", "x", '"_x', { noremap = true, silent = true })
