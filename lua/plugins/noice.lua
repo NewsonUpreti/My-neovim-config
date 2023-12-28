@@ -11,7 +11,7 @@ return -- lazy.nvim
 		-- OPTIONAL:
 		--   `nvim-notify` is only needed, if you want to use the notification view.
 		--   If not available, we use `mini` as the fallback
-		"rcarriga/nvim-notify",
+		-- "rcarriga/nvim-notify",
 	},
 	config = function()
 		require("noice").setup({
@@ -38,6 +38,13 @@ return -- lazy.nvim
 					filter = { event = "msg_showmode" },
 				},
 			},
+			views = {
+				mini = {
+					win_options = {
+						winblend = 0,
+					},
+				},
+			},
 			require("lualine").setup({
 				sections = {
 					lualine_x = {
@@ -49,23 +56,23 @@ return -- lazy.nvim
 					},
 				},
 			}),
-			require("notify").setup({
-				-- default timeout for notifications
-				timeout = 3000,
-				-- default background blend
-				blend = 100,
-				-- default icons
-				icons = {
-					ERROR = "",
-					WARN = "",
-					INFO = "",
-					DEBUG = "",
-					TRACE = "✎",
-					FATAL = "",
-				},
-				-- default background colors
-				background_colour = "#000000",
-			}),
+			-- require("notify").setup({
+			-- 	-- default timeout for notifications
+			-- 	timeout = 3000,
+			-- 	-- default background blend
+			-- 	blend = 100,
+			-- 	-- default icons
+			-- 	icons = {
+			-- 		ERROR = "",
+			-- 		WARN = "",
+			-- 		INFO = "",
+			-- 		DEBUG = "",
+			-- 		TRACE = "✎",
+			-- 		FATAL = "",
+			-- 	},
+			-- 	-- default background colors
+			-- 	background_colour = "#000000",
+			-- }),
 		})
 	end,
 }
