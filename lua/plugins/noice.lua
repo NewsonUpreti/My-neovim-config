@@ -45,17 +45,17 @@ return -- lazy.nvim
 					},
 				},
 			},
-			require("lualine").setup({
-				sections = {
-					lualine_x = {
-						{
-							require("noice").api.statusline.mode.get,
-							cond = require("noice").api.statusline.mode.has,
-							color = { fg = "#f0f0ff" },
-						},
-					},
-				},
-			}),
+			-- require("lualine").setup({
+			-- 	sections = {
+			-- 		lualine_x = {
+			-- 			{
+			-- 				require("noice").api.statusline.mode.get,
+			-- 				cond = require("noice").api.statusline.mode.has,
+			-- 				color = { fg = "#f0f0ff" },
+			-- 			},
+			-- 		},
+			-- 	},
+			-- }),
 			-- require("notify").setup({
 			-- 	-- default timeout for notifications
 			-- 	timeout = 3000,
