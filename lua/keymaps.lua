@@ -39,9 +39,9 @@ vim.api.nvim_set_keymap(
 	[[:w<CR>:rightbelow vsplit term://rustc % -o %:r && ./%:r<CR>i]],
 	{ noremap = true, silent = true }
 )
-vim.api.nvim_set_keymap("n", "<Space>n", ":sp new<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Space>n", ":new<CR>", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "<Space>v", ":vsp tabnew<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Space>v", ":vnew<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("i", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
