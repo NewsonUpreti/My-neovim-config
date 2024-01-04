@@ -62,11 +62,11 @@ vim.api.nvim_set_keymap("n", "|", ":tabnext<CR>", { noremap = true, silent = tru
 vim.api.nvim_set_keymap("n", "<C-a>", "ggVG", { noremap = true, silent = true })
 
 -- Exploring windows splits with shortcuts
-vim.api.nvim_set_keymap("n", "sh", "<C-w>h", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "sj", "<C-w>j", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "sk", "<C-w>k", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "sl", "<C-w>l", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "s\\", "<C-w>w", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-/>", "<C-w>w", { noremap = true, silent = true })
 
 -- terminal toggler keymap for normal.insert and terminal mode with ctrl + \ key
 vim.api.nvim_set_keymap("n", "<C-\\>", ":ToggleTerm<CR>", { noremap = true, silent = true })
