@@ -54,6 +54,7 @@ vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 -- Define a mapping for backslash to work as gt
 vim.api.nvim_set_keymap("n", "|", ":tabnext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-BS>", ":tabprevious<CR>", { noremap = true, silent = true })
 
 -- looking after clipboard registers
 --[[ vim.api.nvim_set_keymap("n", "<C-l>", ":registers<CR>", { noremap = true, silent = true }) ]]
