@@ -1,5 +1,9 @@
 # My neovim configuration
 
+# welcome
+
+## Lets go.........
+
 ## Whats neovim?
 
 Neovim is a extensible CLI based code editor, the child of Vim built with lua programming language. Vi is the grandfather of neovim. Learn more [here](https://neovim.io/)
