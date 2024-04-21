@@ -1,7 +1,7 @@
 vim.api.nvim_set_keymap("n", "<Space>t", [[:tabnew | term<CR>:startinsert<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<S-t>", ":tabnew<CR>", { noremap = true, silent = true })
 --Highlight on search toggler
-vim.api.nvim_set_keymap("n", "<C-h>", ":set hlsearch!<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-s>", ":set hlsearch!<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<up>", "<nop>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<down>", "<nop>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<right>", "<nop>", { noremap = true, silent = true })
@@ -46,7 +46,7 @@ vim.api.nvim_set_keymap("n", "<Space>v", ":vnew<CR>", { noremap = true, silent =
 vim.api.nvim_set_keymap("i", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<Space>w", ":bdelete!<CR>", { noremap = true, silent = true })
 --wordwrap config below
