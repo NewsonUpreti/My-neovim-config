@@ -82,5 +82,5 @@ vim.api.nvim_set_keymap("n", "-", "<C-x>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "x", '"_x', { noremap = true, silent = true })
 
 -- Github copilot chat keymaps
-vim.api.nvim_set_keymap("n", "<C-9>", ":CopilotChatOpen<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-0>", ":CopilotChatToggle<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<f9>", ":CopilotChatOpen<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<f8)>", ":CopilotChatToggle<CR>", { noremap = true, silent = true })
