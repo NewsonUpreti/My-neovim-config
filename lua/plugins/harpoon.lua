@@ -68,5 +68,35 @@ return {
 			"<cmd>lua require('harpoon.ui').nav_file(5)<cr>",
 			{ desc = "Toggling Harpoon quick Menu" }
 		)
+		keymap.set(
+			"n",
+			"<leader>6",
+			"<cmd>lua require('harpoon.ui').nav_file(5)<cr>",
+			{ desc = "Toggling Harpoon quick Menu" }
+		)
+		keymap.set(
+			"n",
+			"<leader>7",
+			"<cmd>lua require('harpoon.ui').nav_file(5)<cr>",
+			{ desc = "Toggling Harpoon quick Menu" }
+		)
+		keymap.set(
+			"n",
+			"<leader>8",
+			"<cmd>lua require('harpoon.ui').nav_file(5)<cr>",
+			{ desc = "Toggling Harpoon quick Menu" }
+		)
+		keymap.set(
+			"n",
+			"<leader>9",
+			"<cmd>lua require('harpoon.ui').nav_file(5)<cr>",
+			{ desc = "Toggling Harpoon quick Menu" }
+		)
+		keymap.set(
+			"n",
+			"<leader>0",
+			"<cmd>lua require('harpoon.ui').nav_file(5)<cr>",
+			{ desc = "Toggling Harpoon quick Menu" }
+		)
 	end,
 }

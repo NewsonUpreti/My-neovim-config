@@ -9,6 +9,8 @@ return {
 		require("nvim-tree").setup({
 
 			vim.api.nvim_set_keymap("n", "<Space>e", ":NvimTreeOpen<CR>", { noremap = true, silent = true }),
+			-- respect_buf_cwd = true,
+			-- sync_root_with_cwd = true,
 
 			sort = {
 				sorter = "case_sensitive",
