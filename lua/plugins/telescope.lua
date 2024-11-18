@@ -25,6 +25,15 @@ return {
 			{ desc = "[?] Find recently opened files" }
 		)
 
+		-- new learned from the primeagen
+		--
+		vim.keymap.set("n", "<leader>fw", function()
+			builtin.grep_string({
+				search = vim.fn.input("Grep For > "),
+				-- only_sort_text = true,
+			})
+		end)
+
 		vim.keymap.set("n", "<leader>gf", require("telescope.builtin").git_files, { desc = "Search [G]it [F]iles" })
 		vim.keymap.set("n", "<leader>gg", ":LiveGrepGitRoot<cr>", { desc = "[S]earch by [G]rep on Git Root" })
 		require("telescope").setup({
