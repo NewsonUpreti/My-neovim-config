@@ -29,6 +29,9 @@ return {
 			-- list of servers for mason to install
 			ensure_installed = {
 				"ts_ls",
+				-- "typescriptreact",
+				"denols",
+				"eslint",
 				"html",
 				"cssls",
 				"tailwindcss",
@@ -50,11 +53,11 @@ return {
 				"prettierd",
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
-				"isort", -- python formatter
-				"black", -- python formatter
-				"pylint", -- python linter
+				-- "isort", -- python formatter
+				-- "black", -- python formatter
+				-- "pylint", -- python linter
 				"eslint_d", -- js linter
-				"clang-format",
+				-- "clang-format",
 			},
 		})
 	end,
