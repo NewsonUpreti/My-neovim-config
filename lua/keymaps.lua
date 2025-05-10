@@ -2,9 +2,9 @@ vim.api.nvim_set_keymap("n", "<Space>t", [[:tabnew | term<CR>:startinsert<CR>]],
 vim.api.nvim_set_keymap("n", "<S-t>", ":tabnew<CR>", { noremap = true, silent = true })
 --Highlight on search toggler
 vim.api.nvim_set_keymap("n", "<C-s>", ":set hlsearch!<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<up>", "<nop>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<down>", "<nop>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<right>", "<nop>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<up>", "<nop>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<down>", "<nop>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<right>", "<nop>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap(
 	"n",
