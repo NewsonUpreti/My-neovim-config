@@ -84,3 +84,7 @@ vim.api.nvim_set_keymap("n", "x", '"_x', { noremap = true, silent = true })
 -- Github copilot chat keymaps
 vim.api.nvim_set_keymap("n", "<f9>", ":CopilotChatToggle<CR>", { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap("n", "<f8)>", ":CopilotChatToggle<CR>", { noremap = true, silent = true })
+--
+vim.g.VM_maps = {
+  ['Skip Region'] = '<C-q>',
+}
