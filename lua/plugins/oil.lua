@@ -1,33 +1,37 @@
-return{
+return {
   "stevearc/oil.nvim",
   opts = {
     default_file_explorer = true,
     view_options = {
       show_hidden = true,
     },
+    keymaps = {
+      ["q"] = "actions.close",
+      ["<CR>"] = "actions.select",
+      ["p"] = "actions.preview", -- Preview file
+      ["<Tab>"] = "actions.preview", -- Also Tab to preview
+    },
   },
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
-    -- <Space>- toggles Oil in project root (.)
     {
       "<leader>-",
       function()
         local oil = require("oil")
         if vim.bo.filetype == "oil" then
-          vim.cmd("bdelete") -- close Oil buffer
+          vim.cmd("bdelete")
         else
-          oil.open(".") -- open in project root
+          oil.open(".")
         end
       end,
       desc = "Toggle Oil at project root",
     },
-    -- <Space>o toggles Oil in current file’s directory
     {
       "<leader>o",
       function()
         local oil = require("oil")
         if vim.bo.filetype == "oil" then
-          vim.cmd("bdelete") -- close Oil buffer
+          vim.cmd("bdelete")
         else
           local path = vim.fn.expand("%:p:h")
           oil.open(path)
