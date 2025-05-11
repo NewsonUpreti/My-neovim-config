@@ -1,0 +1,11 @@
+
+{
+  "Lua.workspace.checkThirdParty": false,
+  "Lua.diagnostics.globals": ["vim"],
+  "Lua.workspace.library": [
+    "${3rd}/luv/library",
+    "${3rd}/busted/library",
+    "${env:VIMRUNTIME}/lua",
+    "${env:HOME}/.config/nvim/lua"
+  ]
+}

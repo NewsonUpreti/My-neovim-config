@@ -82,5 +82,6 @@ return {
 		end
 
 		vim.api.nvim_create_user_command("LiveGrepGitRoot", live_grep_git_root, {})
+    require "custom_plugins.multigrep".setup()
 	end,
 }
