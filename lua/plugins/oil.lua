@@ -8,7 +8,8 @@ return {
     keymaps = {
       ["q"] = "actions.close",
       ["<CR>"] = "actions.select",
-      ["p"] = "actions.preview", -- Preview file
+      -- shit, p was for paste. bullshit
+      -- ["p"] = "actions.preview", -- Preview file
       ["<Tab>"] = "actions.preview", -- Also Tab to preview
     },
   },
