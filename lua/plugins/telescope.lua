@@ -8,20 +8,24 @@ return {
 		vim.keymap.set(
 			"n",
 			"<leader><space>",
-			require("telescope.builtin").buffers,
+			builtin.buffers,
 			{ desc = "[ ] Find existing buffers" }
 		)
 		vim.keymap.set("n", "<leader>/", function()
 			-- You can pass additional configuration to telescope to change theme, layout, etc.
-			require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+			builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
 				-- winblend = 10,
-				previewer = false,
+        layout_config  = {
+          width = 0.6,
+          height = 0.6
+        },
+				previewer = true,
 			}))
 		end, { desc = "[/] Fuzzily search in current buffer" })
 		vim.keymap.set(
 			"n",
 			"<leader>?",
-			require("telescope.builtin").oldfiles,
+			builtin.oldfiles,
 			{ desc = "[?] Find recently opened files" }
 		)
 
@@ -32,10 +36,12 @@ return {
 				search = vim.fn.input("Grep For > "),
 				-- only_sort_text = true,
 			})
-		end)
+		end,{desc = "[find word] find word in current repository"})
 
-		vim.keymap.set("n", "<leader>gf", require("telescope.builtin").git_files, { desc = "Search [G]it [F]iles" })
+		vim.keymap.set("n", "<leader>gf", builtin.git_files, { desc = "Search [G]it [F]iles" })
 		vim.keymap.set("n", "<leader>gg", ":LiveGrepGitRoot<cr>", { desc = "[S]earch by [G]rep on Git Root" })
+		vim.keymap.set("n", "<leader>gr", ":LiveGrep<cr>", { desc = "Live grep on any repo [current]" })
+		vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 		require("telescope").setup({
 			defaults = {
 				mappings = {
@@ -80,8 +86,12 @@ return {
 				})
 			end
 		end
+    local function live_grep()
+    require("telescope.builtin").live_grep()
+    end
 
 		vim.api.nvim_create_user_command("LiveGrepGitRoot", live_grep_git_root, {})
+		vim.api.nvim_create_user_command("LiveGrep", live_grep, {})
     require "custom_plugins.multigrep".setup()
 	end,
 }
