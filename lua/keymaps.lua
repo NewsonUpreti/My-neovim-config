@@ -88,3 +88,8 @@ vim.api.nvim_set_keymap("n", "<f9>", ":CopilotChatToggle<CR>", { noremap = true,
 vim.g.VM_maps = {
   ['Skip Region'] = '<C-q>',
 }
+
+-- typescript lsp useful one. 
+-- npm i -g typescript-language-server
+vim.keymap.set("n", "<leader>a", ":LspTypescriptSourceAction<CR>", { noremap = true, silent = true, desc = "TS Source Action" })
+
