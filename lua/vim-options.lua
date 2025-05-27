@@ -20,6 +20,8 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.breakindent = true
 vim.cmd("set foldmethod=indent")
+vim.o.cursorline = true
+vim.api.nvim_set_hl(0, "CursorLine", { bg = "#062a3b" }) -- dark but not transparent
 
 vim.cmd("set foldlevel=99")
 -- Disable folding in Telescope's result window.
