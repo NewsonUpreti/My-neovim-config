@@ -47,7 +47,7 @@ local live_multigrep = function(opts)
 end
 
 M.setup = function()
-  vim.keymap.set("n", "<leader>fg", live_multigrep)
+  vim.keymap.set("n", "<leader>fg", live_multigrep, {desc = "[Grep String] in current directory and also target files, extensions...."})
 end
 
 return M

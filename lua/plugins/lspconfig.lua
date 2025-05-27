@@ -140,7 +140,17 @@ return {
 		lspconfig["clangd"].setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
-		})
+    })
+
+    lspconfig.denols.setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+      root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+      init_options = {
+        lint = true,
+        unstable = true,
+      },
+    })
 
 		-- configure lua server (with special settings)
 		lspconfig["lua_ls"].setup({
