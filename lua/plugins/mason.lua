@@ -30,7 +30,7 @@ return {
 			ensure_installed = {
 				"ts_ls",
 				-- "typescriptreact",
-				"denols",
+				-- "denols",
 				"eslint",
 				"html",
 				"cssls",
