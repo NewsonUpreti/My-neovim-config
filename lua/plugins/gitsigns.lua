@@ -10,6 +10,7 @@ return {
 			topdelete = { text = "‾" },
 			changedelete = { text = "~" },
 		},
+    current_line_blame = true,
 		on_attach = function(bufnr)
 			vim.keymap.set(
 				"n",
