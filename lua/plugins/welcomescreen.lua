@@ -3,7 +3,7 @@ return {
 	-- requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 	config = function()
 		require("startup").setup({
-			theme = "evil",
+			theme = "dashboard",
 		})
 	end,
 }
