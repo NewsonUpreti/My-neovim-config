@@ -28,4 +28,5 @@ require("lazy").setup({
 
 require("vim-options")
 require("keymaps")
+require("autosave")
 --nvim tree configuration
