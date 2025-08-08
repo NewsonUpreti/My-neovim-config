@@ -93,3 +93,12 @@ vim.g.VM_maps = {
 -- npm i -g typescript-language-server
 vim.keymap.set("n", "<leader>a", ":LspTypescriptSourceAction<CR>", { noremap = true, silent = true, desc = "TS Source Action" })
 
+
+
+-- Resize splits using F9–F12 keys
+local opts = { noremap = true, silent = true }
+
+vim.keymap.set('n', '<F9>',  ':resize +2<CR>', opts)               -- Increase height
+vim.keymap.set('n', '<F10>', ':resize -2<CR>', opts)               -- Decrease height
+vim.keymap.set('n', '<F11>', ':vertical resize -2<CR>', opts)     -- Decrease width
+vim.keymap.set('n', '<F12>', ':vertical resize +2<CR>', opts)     -- Increase width
