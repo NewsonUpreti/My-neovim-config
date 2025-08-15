@@ -35,7 +35,14 @@ return {
 				operators = {},
 			},
 			color_overrides = {},
-			custom_highlights = {},
+			custom_highlights = function()
+				return {
+					NormalFloat = { bg = "none" },
+					FloatBorder = { bg = "none" },
+					TelescopeNormal = { bg = "none" },
+					TelescopeBorder = { bg = "none" },
+				}
+			end,
 			integrations = {
 				cmp = true,
 				gitsigns = true,
