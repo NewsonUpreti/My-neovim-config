@@ -140,17 +140,23 @@ return {
 		lspconfig["clangd"].setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
-    })
+		})
 
-    lspconfig["denols"].setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
-      root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-      init_options = {
-        lint = true,
-        unstable = true,
-      },
-    })
+		lspconfig["denols"].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+			init_options = {
+				lint = true,
+				unstable = true,
+			},
+		})
+
+		lspconfig["rust_analyzer"].setup({
+			on_attach = function(client, bufnr)
+				vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+			end,
+		})
 
 		-- configure lua server (with special settings)
 		lspconfig["lua_ls"].setup({
