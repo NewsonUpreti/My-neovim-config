@@ -71,31 +71,32 @@ return {
 		end
 
 		-- configure html server
-		lspconfig["html"].setup({
+		-- HTML
+		vim.lsp.config("html", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
-		-- configure typescript server with plugin
-		lspconfig["ts_ls"].setup({
+		-- TypeScript
+		vim.lsp.config("ts_ls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
-		-- configure css server
-		lspconfig["cssls"].setup({
+		-- CSS
+		vim.lsp.config("cssls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
-		-- configure tailwindcss server
-		lspconfig["tailwindcss"].setup({
+		-- TailwindCSS
+		vim.lsp.config("tailwindcss", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
-		-- configure svelte server
-		lspconfig["svelte"].setup({
+		-- Svelte
+		vim.lsp.config("svelte", {
 			capabilities = capabilities,
 			on_attach = function(client, bufnr)
 				on_attach(client, bufnr)
@@ -111,65 +112,81 @@ return {
 			end,
 		})
 
-		-- configure prisma orm server
-		lspconfig["prismals"].setup({
+		-- Prisma
+		vim.lsp.config("prismals", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
-		-- configure graphql language server
-		lspconfig["graphql"].setup({
+		-- GraphQL
+		vim.lsp.config("graphql", {
 			capabilities = capabilities,
 			on_attach = on_attach,
-			filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+			filetypes = {
+				"graphql",
+				"gql",
+				"svelte",
+				"typescriptreact",
+				"javascriptreact",
+			},
 		})
 
-		-- configure emmet language server
-		lspconfig["emmet_ls"].setup({
+		-- Emmet
+		vim.lsp.config("emmet_ls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
-			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+			filetypes = {
+				"html",
+				"typescriptreact",
+				"javascriptreact",
+				"css",
+				"sass",
+				"scss",
+				"less",
+				"svelte",
+			},
 		})
 
-		-- configure python server
-		lspconfig["pyright"].setup({
+		-- Python
+		vim.lsp.config("pyright", {
 			capabilities = capabilities,
 			on_attach = on_attach,
-		})
-		-- config for clangd
-		lspconfig["clangd"].setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
 		})
 
-		lspconfig["denols"].setup({
-			on_attach = on_attach,
+		-- Clangd
+		vim.lsp.config("clangd", {
 			capabilities = capabilities,
-			root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+			on_attach = on_attach,
+		})
+
+		-- Deno
+		vim.lsp.config("denols", {
+			capabilities = capabilities,
+			on_attach = on_attach,
+			root_dir = vim.fs.root(0, { "deno.json", "deno.jsonc" }),
 			init_options = {
 				lint = true,
 				unstable = true,
 			},
 		})
 
-		lspconfig["rust_analyzer"].setup({
-			on_attach = function(client, bufnr)
+		-- Rust
+		vim.lsp.config("rust_analyzer", {
+			on_attach = function(_, bufnr)
 				vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 			end,
 		})
 
-		-- configure lua server (with special settings)
-		lspconfig["lua_ls"].setup({
+		-- Lua
+		vim.lsp.config("lua_ls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
-			settings = { -- custom settings for lua
+			settings = {
 				Lua = {
-					-- make the language server recognize "vim" global
 					diagnostics = {
 						globals = { "vim" },
 					},
 					workspace = {
-						-- make language server aware of runtime files
 						library = {
 							[vim.fn.expand("$VIMRUNTIME/lua")] = true,
 							[vim.fn.stdpath("config") .. "/lua"] = true,
