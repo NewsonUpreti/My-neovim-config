@@ -15,6 +15,10 @@ return {
 			sort = {
 				sorter = "case_sensitive",
 			},
+			update_focused_file = {
+				enable = true,
+				update_root = false,
+			},
 			view = {
 				adaptive_size = true,
 				relativenumber = true,
