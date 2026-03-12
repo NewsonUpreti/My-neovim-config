@@ -8,6 +8,12 @@ return {
 	config = function()
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
+		local harpoon = require("harpoon")
+		harpoon.setup({
+			menu = {
+				width = math.floor(vim.o.columns * 0.6),
+			},
+		})
 
 		keymap.set(
 			"n",
