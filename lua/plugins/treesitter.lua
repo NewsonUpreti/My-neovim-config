@@ -1,6 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
+  branch = "master",
 	config = function()
 		vim.defer_fn(function()
 			require("nvim-treesitter.configs").setup({
