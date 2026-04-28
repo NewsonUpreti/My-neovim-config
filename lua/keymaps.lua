@@ -36,9 +36,16 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
 	"n",
 	"<Space>z",
-	[[:w<CR>:rightbelow vsplit term://rustc % -o %:r && ./%:r<CR>i]],
+	[[:w<CR>:rightbelow vsplit term://cd $(dirname $(cargo locate-project --message-format plain)) && cargo run<CR>i]],
 	{ noremap = true, silent = true }
 )
+
+vim.cmd([[
+command! Can  execute ':w | rightbelow vsplit term://cd $(dirname $(cargo locate-project --message-format plain)) && cargo run'
+command! Cab  execute ':w | rightbelow vsplit term://cd $(dirname $(cargo locate-project --message-format plain)) && cargo build'
+command! Cabr execute ':w | rightbelow vsplit term://cd $(dirname $(cargo locate-project --message-format plain)) && cargo build --release'
+]])
+
 vim.api.nvim_set_keymap("n", "<Space>n", ":new<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<Space>v", ":vnew<CR>", { noremap = true, silent = true })
@@ -86,19 +93,22 @@ vim.api.nvim_set_keymap("n", "<f9>", ":CopilotChatToggle<CR>", { noremap = true,
 -- vim.api.nvim_set_keymap("n", "<f8)>", ":CopilotChatToggle<CR>", { noremap = true, silent = true })
 --
 vim.g.VM_maps = {
-  ['Skip Region'] = '<C-q>',
+	["Skip Region"] = "<C-q>",
 }
 
--- typescript lsp useful one. 
+-- typescript lsp useful one.
 -- npm i -g typescript-language-server
-vim.keymap.set("n", "<leader>a", ":LspTypescriptSourceAction<CR>", { noremap = true, silent = true, desc = "TS Source Action" })
-
-
+vim.keymap.set(
+	"n",
+	"<leader>a",
+	":LspTypescriptSourceAction<CR>",
+	{ noremap = true, silent = true, desc = "TS Source Action" }
+)
 
 -- Resize splits using F9–F12 keys
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set('n', '<F9>',  ':resize +2<CR>', opts)               -- Increase height
-vim.keymap.set('n', '<F10>', ':resize -2<CR>', opts)               -- Decrease height
-vim.keymap.set('n', '<F11>', ':vertical resize -2<CR>', opts)     -- Decrease width
-vim.keymap.set('n', '<F12>', ':vertical resize +2<CR>', opts)     -- Increase width
+vim.keymap.set("n", "<F9>", ":resize +2<CR>", opts) -- Increase height
+vim.keymap.set("n", "<F10>", ":resize -2<CR>", opts) -- Decrease height
+vim.keymap.set("n", "<F11>", ":vertical resize -2<CR>", opts) -- Decrease width
+vim.keymap.set("n", "<F12>", ":vertical resize +2<CR>", opts) -- Increase width
